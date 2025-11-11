@@ -1,0 +1,303 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f2f6fc;
+  color: #2e2e2e;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 1.5rem 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.6s ease-in-out;
+}
+
+.navbar-logo img {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 3rem;
+}
+
+.navbar-list li a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-list li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: white;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-list li a:hover {
+  color: #ffe066;
+  transform: scale(1.08);
+}
+
+.navbar-list li a:hover::after {
+  width: 100%;
+}
+
+/* ===== Page Container ===== */
+.page-content {
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center PowerBIEmbed container if needed */
+.page-content > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ===== Headings ===== */
+.page-content h2 {
+  font-size: 2.8rem;
+  color: #2b6cb0;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.page-content h3 {
+  font-size: 1.9rem;
+  color: #3b3f58;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  position: relative;
+}
+
+/* ===== Paragraphs ===== */
+.page-content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 1.5rem auto;
+}
+
+/* ===== Image Grid Section ===== */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.image-grid img {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== About Feature Cards ===== */
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: #f4f7fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  color: #2b6cb0;
+}
+
+/* ===== Feature List (optional) ===== */
+.feature-list-text {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 1rem auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.feature-list-text li {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.feature-list-text li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2b6cb0;
+  font-weight: bold;
+}
+
+/* ===== Animations ===== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* ===== Titles/Subtitles (optional use) ===== */
+.app-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.app-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-list {
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .page-content {
+    padding: 2rem 1rem;
+  }
+
+  .page-content h2 {
+    font-size: 2rem;
+  }
+
+  .page-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .page-content p {
+    font-size: 1rem;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
